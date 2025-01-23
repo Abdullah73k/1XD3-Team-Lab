@@ -1,0 +1,15 @@
+*{
+    font-family:sans-serif;
+}
+
+.content{
+    display:flex;
+   justify-content:space-around;
+   margin:10px;
+   padding:10px;
+}
+.imgs{
+    width:50%;
+    border:1px solid black;
+    border-radius:10px;
+}
