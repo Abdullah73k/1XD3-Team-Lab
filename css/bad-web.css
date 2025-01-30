@@ -4,10 +4,21 @@
 	padding: 0;
 }
 
+body {
+	font-family: "Times New Roman", Times, serif;
+	color: #333;
+	background-color: #f8f9fa;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .nav-bar {
 	display: flex;
@@ -44,13 +55,14 @@ button {
     width: 8em;
     font-weight: bold;
     color: white;
-    background-color: #F28B82;
+    background-color: #4b739b;
     transition: ease 1.5s;
 }
 
 button:hover {
-    background-color: #B22222;
+    background-color: #1e2a38;
 }
+
 
 footer {
 	padding: 1rem;
