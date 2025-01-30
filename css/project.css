@@ -28,6 +28,15 @@ body {
 	align-items: center;
 }
 
+h1{
+	background-color:#34495e;
+	border: 2px solid darkblue;
+}
+
+h2{
+	border: 2px solid darkblue;
+}
+
 .nav-bar {
 	display: flex;
 	justify-content: center;
