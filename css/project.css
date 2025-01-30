@@ -29,13 +29,9 @@ body {
 }
 
 h1{
-	background-color:#34495e;
-	border: 2px solid darkblue;
+	background-color:#5badff;
 }
 
-h2{
-	border: 2px solid darkblue;
-}
 
 .nav-bar {
 	display: flex;
