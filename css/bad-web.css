@@ -55,13 +55,14 @@ button {
     width: 8em;
     font-weight: bold;
     color: white;
-    background-color: #F28B82;
+    background-color: #4b739b;
     transition: ease 1.5s;
 }
 
 button:hover {
-    background-color: #B22222;
+    background-color: #1e2a38;
 }
+
 
 footer {
 	padding: 1rem;
