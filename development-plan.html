@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Development Plan</title>
+        <link rel="stylesheet" href="/css/development-plan.css">
+	</head>
+	<body>
+		<header>
+			<nav class="nav-bar">
+				<a href="./index.html">HOME</a>
+				<a href="./about.html">ABOUT</a>
+				<a href="./project.html">PROJECTS</a>
+				<a href="./showcase.html">SHOWCASE</a>
+			</nav>
+		</header>
+		<section class="page">
+			<h1>Development Plan</h1>
+
+			<h2>1. Names</h2>
+			<ul>
+				<li>
+					<strong>Team:</strong> Abdullah Khamis, Chaemin Lee, Bavishan Mathan,
+					Jackson Bundy
+				</li>
+				<li><strong>Client:</strong> Seojin Ko</li>
+				<li><strong>App:</strong> Task Manager</li>
+			</ul>
+
+			<h2>2. Purpose</h2>
+			<p>
+				Our app is going to be a calendar/time management app. The target users
+				are students/employees looking to organize their schedule. They are
+				likely to be mobile users, so the site should be designed with narrower
+				widths first and foremost, although desktop users do need some
+				consideration. The app should allow users to add as many tasks/events as
+				they want and be able to see when/where they are set to happen. They
+				should also be able to view deadlines for projects, and be able to track
+				their progress.
+			</p>
+
+			<h2>3. Data Description</h2>
+			<h3>Task Table</h3>
+			<ul>
+				<li><strong>Id:</strong> Primary key</li>
+				<li><strong>Title:</strong> varchar(255) not null</li>
+				<li><strong>Description:</strong> text</li>
+				<li><strong>Due_date:</strong> timestamp</li>
+				<li>
+					<strong>Status:</strong> varchar(50) default 'pending' (either
+					'pending' or 'completed')
+				</li>
+				<li><strong>Created_At:</strong> timestamp</li>
+			</ul>
+
+			<h3>Schedule Table</h3>
+			<ul>
+				<li><strong>Id:</strong> Primary key</li>
+				<li><strong>TaskId:</strong> references task id</li>
+				<li><strong>Start time:</strong> timestamp not null</li>
+				<li><strong>End time:</strong> timestamp not null</li>
+				<li><strong>Created_at:</strong> timestamp</li>
+			</ul>
+
+			<h3>Progress/Achievements Table</h3>
+			<ul>
+				<li><strong>Id:</strong> Primary key</li>
+				<li><strong>Name:</strong> varchar(50) not null</li>
+				<li><strong>Description:</strong> varchar(250)</li>
+				<li>
+					<strong>Condition_type:</strong> varchar(50) not null - indicates
+					condition type such as tasks completed or daily tasks done
+				</li>
+				<li><strong>Condition_value:</strong> int not null</li>
+			</ul>
+
+			<h2>4. Functions Performed by App</h2>
+			<ul>
+				<li>Store tasks in a calendar (INSERT operations)</li>
+				<li>Update task manager as tasks are completed (UPDATE operations)</li>
+				<li>
+					Update achievement page upon reaching milestones (e.g., 10 tasks
+					completed, 20, etc.) (UPDATE operations)
+				</li>
+				<li>Delete task when finished (DELETE operations)</li>
+			</ul>
+
+			<h2>5. Roles of PHP and JS</h2>
+			<ul>
+				<li>
+					<strong>Backend:</strong> Handles communication with the database by
+					storing, deleting, or updating user data. It also sends data to the
+					front end when updates are required.
+				</li>
+				<li>
+					<strong>Frontend:</strong> Focuses on creating a professional user
+					interface and managing the exchange of information with the backend to
+					process or update tasks.
+				</li>
+			</ul>
+
+			<h2>6. Roles of Team Members</h2>
+			<ul>
+				<li>
+					<strong>Abdullah:</strong> CSS styling for a polished user interface
+					and writing SQL queries for backend-database communication.
+				</li>
+				<li>
+					<strong>Bavishan:</strong> Creating HTML templates and assisting with
+					the overall styling of the app.
+				</li>
+				<li>
+					<strong>Chaemin:</strong> Handling data collection from users and
+					managing its storage or manipulation (PHP, SQL).
+				</li>
+				<li>
+					<strong>Jackson:</strong> Developing frontend solutions to display
+					data received from the backend.
+				</li>
+			</ul>
+
+			<h2>7. Increments</h2>
+			<ul>
+				<li>Initial Version: Calendar with addable events</li>
+				<li>Timer and Alerts</li>
+				<li>Task Manager View</li>
+				<li>Contact Book</li>
+				<li>Achievements</li>
+			</ul>
+
+			<h2>8. Client Feedback</h2>
+			<blockquote>
+				<p>
+					“Since students and office workers usually organize their schedules on
+					their phones, I'm satisfied with making an app in a mobile size. I
+					also like organizing my schedule in a calendar format, and it's
+					convenient to manage and update my to-do lists within the calendar.
+					But can you add a timer feature as well? I want to set deadlines for
+					my tasks each day so I can visually see how much time I have left to
+					complete my work.”
+				</p>
+			</blockquote>
+			<p>
+				Client wants us to add a timer in our app in order to manage the users
+				work efficiently.
+			</p>
+		</section>
+		<footer>
+			<p>&copy; All rights reserved to Secret Syntax</p>
+		</footer>
+	</body>
+</html>
